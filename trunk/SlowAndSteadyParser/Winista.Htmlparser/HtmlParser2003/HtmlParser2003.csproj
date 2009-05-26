@@ -1,0 +1,574 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F973B917-F1D1-4707-80DC-6F9B05636B47}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Winista.HtmlParser</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Winista.Text.HtmlParser</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\HtmlParser.Net\SharpZipLib_0855_Bin\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\AbstractData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ColumnData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ColumnDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\HeadData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ImageData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\ImageDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\LinkData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\LinkDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\MetaTagData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\MetaTagDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\PageData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\RowData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\RowDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\TableData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\TableDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\AbstractExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\EmailAddressExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\ImageExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\ImageLinkExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\LinkExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\PageExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\StringExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Extractors\TableExtractor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\AndFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\AttributeRegexFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\HasAttributeFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\HasChildFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\HasParentFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\HasSiblingFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\IsEqualFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\LinkRegexFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\LinkStringFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\MailLinkFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\NodeClassFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\NotFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\OrFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\RegexFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\StringFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\TagNameFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Filters\XorFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpProtocol.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpProtocolContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpProtocolOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpProtocolStatus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpResponseMgr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\HttpUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\ResourceGoneException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\RetryLaterException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\RobotBlockedException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Http\RobotRulesParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="INode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="INodeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="INodeFilter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IRemark.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ITag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IText.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\Cursor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\InputStreamSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\Lexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\Page.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\PageAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\PageIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\ParserStream.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\Source.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lex\StringSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\AbstractNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\RemarkNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\TagNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Nodes\TextNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PrototypicalNodeFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\CompositeTagScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\IScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\JspScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\ScriptDecoder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\ScriptScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\StyleScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scanners\TagScanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\HashSetSupport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\ICollectionSupport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\ISetSupport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\SupportMisc.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Support\Tokenizer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TagAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\AppletTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\ATag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\BaseHrefTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\BodyTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\Bullet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\BulletList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\CodeTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\CompositeTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\DefinitionList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\DefinitionListBullet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\Div.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\DoctypeTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\FormTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\FrameSetTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\FrameTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\HeadingTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\HeadTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\Html.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\IFrameTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\ImageTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\InputTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\JspTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\LabelTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\LinkTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\MetaTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\ObjectTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\OptionTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\ParagraphTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\ScriptTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\SelectTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\Span.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\StyleTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\TableColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\TableHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\TableRow.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\TableTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\TextareaTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tags\TitleTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ChainedException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\CharacterReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\CharacterReferenceEx.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ContentProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\DefaultParserFeedback.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\EncodingChangeException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\FeedbackManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\GZIPUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\INodeIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IParserFeedBack.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ISimpleNodeIterator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\IteratorImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\NodeList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ParserConf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ParserException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\ParserUtils.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Sort\IOrdered.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Sort\ISortable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Sort\SortImpl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\SpecialHashtable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\StringUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Translate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\HtmlPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\LinkFindingVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\NodeVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\TagFindingVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\TextExtractingVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Visitors\UrlModifyingVisitor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="htmlparser-conf.xsl" />
+    <Content Include="htmlparser-default.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="htmlparser-site.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
