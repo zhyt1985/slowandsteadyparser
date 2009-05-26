@@ -1,0 +1,142 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA45A99C-E453-4B3B-8BD5-01AC704C7430}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VBAEngine</RootNamespace>
+    <AssemblyName>VBAEngine</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotRas, Version=1.0.3371.13820, Culture=neutral, PublicKeyToken=b378f04384b7892a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DotRas_v1.0_RC2\WIN2K\DotRas.dll</HintPath>
+    </Reference>
+    <Reference Include="FetionSDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\FetionSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.Vsa" />
+    <Reference Include="Microsoft.Vsa" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IVBA\IVBAHtml.cs" />
+    <Compile Include="Utl\ADSL\ADSLFactory.cs" />
+    <Compile Include="IVBA\IVBAIE.cs" />
+    <Compile Include="IVBA\IVBALog.cs" />
+    <Compile Include="IVBA\IVBAObject.cs" />
+    <Compile Include="IVBA\IVBAObjectHost.cs" />
+    <Compile Include="IVBA\IVBAScript.cs" />
+    <Compile Include="IVBA\IVBATask.cs" />
+    <Compile Include="IVBA\IVBAUtility.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utl\ChineseAddressParser\ChineseAddress.cs" />
+    <Compile Include="Utl\ChineseAddressParser\ChineseAddressParser.cs" />
+    <Compile Include="Utl\ChineseAddressParser\Segment.cs" />
+    <Compile Include="Utl\ChineseAddressParser\Splitter.cs" />
+    <Compile Include="Utl\Comment\CommentDimensionReduction.cs" />
+    <Compile Include="Utl\Comment\Thesaurus.cs" />
+    <Compile Include="Utl\Comment\UserNameCreator.cs" />
+    <Compile Include="Utl\Fetion\FetionManager.cs" />
+    <Compile Include="Utl\MessageMonitor.cs" />
+    <Compile Include="Utl\NodeSeek.cs" />
+    <Compile Include="Utl\PerformanceBalance.cs" />
+    <Compile Include="Utl\ADSL\RASManager.cs" />
+    <Compile Include="Utl\ADSL\RASDisplay.cs" />
+    <Compile Include="Utl\CWBPool.cs" />
+    <Compile Include="Utl\DelegateHelper.cs" />
+    <Compile Include="Utl\RandomString.cs" />
+    <Compile Include="Utl\ResembleString\StringDifference.cs" />
+    <Compile Include="Utl\SafeOledb.cs" />
+    <Compile Include="Utl\VBAEngineEnum.cs" />
+    <Compile Include="Utl\Wininet.cs" />
+    <Compile Include="VBAHost\VBAHtmlHost.cs" />
+    <Compile Include="VBAHtml.cs" />
+    <Compile Include="VBAIE.cs" />
+    <Compile Include="VBAEngineBase.cs" />
+    <Compile Include="VBAHost\VBAIEHost.cs" />
+    <Compile Include="VBAStop\VBAHtmlStop.cs" />
+    <Compile Include="VBAStop\VBAIEStop.cs" />
+    <Compile Include="VBALog.cs" />
+    <Compile Include="VBAHost\VBALogHost.cs" />
+    <Compile Include="VBAStop\VBALogStop.cs" />
+    <Compile Include="VBAStaticEngine.cs" />
+    <Compile Include="VBATask.cs" />
+    <Compile Include="VBAHost\VBATaskHost.cs" />
+    <Compile Include="VBAStop\VBATaskStop.cs" />
+    <Compile Include="VBAUtility.cs" />
+    <Compile Include="VBATest\VBATestLog.cs" />
+    <Compile Include="VBATest\VBATestIE.cs" />
+    <Compile Include="VBAHost\VBAUtilityHost.cs" />
+    <Compile Include="VBAStop\VBAUtilityStop.cs" />
+    <Compile Include="Utl\Wordmatch\AbstractWordmatch.cs" />
+    <Compile Include="Utl\Wordmatch\AddressWordParser.cs" />
+    <Compile Include="Utl\Wordmatch\AggregateWordmatch.cs" />
+    <Compile Include="Utl\Wordmatch\DoNothingWordmatch.cs" />
+    <Compile Include="Utl\Wordmatch\RegexWordmatch.cs" />
+    <Compile Include="Utl\Wordmatch\HeadWordmatch.cs" />
+    <Compile Include="Utl\Wordmatch\MatchingString.cs" />
+    <Compile Include="Utl\Wordmatch\NoiseCollector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\csExWB\csExWB.csproj">
+      <Project>{E8E8BB5D-3302-4763-94F2-A8A238F7D6EA}</Project>
+      <Name>csExWB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log4net\log4net.csproj">
+      <Project>{F6A02431-167E-4347-BC43-65532C31CDB7}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SharpICTCLAS\SharpICTCLAS\SharpICTCLAS.csproj">
+      <Project>{E27DB382-5785-40F9-B671-197FD5B77569}</Project>
+      <Name>SharpICTCLAS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Winista.Htmlparser\HtmlParser2003\HtmlParser2003.csproj">
+      <Project>{F973B917-F1D1-4707-80DC-6F9B05636B47}</Project>
+      <Name>HtmlParser2003</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
