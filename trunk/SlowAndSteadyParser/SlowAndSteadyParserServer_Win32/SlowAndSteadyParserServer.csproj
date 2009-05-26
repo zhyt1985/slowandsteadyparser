@@ -1,0 +1,255 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4667C575-D658-4FBB-9807-BACD15AD4C67}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SlowAndSteadyParser</RootNamespace>
+    <AssemblyName>SlowAndSteadyParser</AssemblyName>
+    <StartupObject>SlowAndSteadyParser.Program</StartupObject>
+    <ApplicationIcon>128.ico</ApplicationIcon>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ManifestCertificateThumbprint>F2BFB7366C00650377FBBBA1EBC2C2F367EF4019</ManifestCertificateThumbprint>
+    <ManifestKeyFile>SlowAndSteadyParserServer_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <PublishUrl>c:\kk\myapplication\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationVersion>1.2.2.%2a</ApplicationVersion>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.Vsa" />
+    <Reference Include="Microsoft.Vsa" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Script\Aibang_BeforeTask v1.vba" />
+    <None Include="Script\Aibang_BeforeTask v2.vba" />
+    <None Include="Script\Aibang_ParserTask v1.vba" />
+    <None Include="Script\Aibang_ParserTask v2.1 .vba" />
+    <None Include="Script\Aibang_ParserTask v2.vba" />
+    <None Include="Script\Aibang_ParserTask v3.vba" />
+    <None Include="Script\Aibang_Storage v1.1.VBA" />
+    <None Include="Script\Aibang_Storage v1.3.VBA" />
+    <None Include="Script\Aibang_Storage v1.VBA" />
+    <None Include="Script\Aibang_Storage v2.VBA" />
+    <None Include="Script\Code1.vba" />
+    <Compile Include="FrmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWelcome.Designer.cs">
+      <DependentUpon>FrmWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonitor.Designer.cs">
+      <DependentUpon>FrmMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="ServerControlManager.cs" />
+    <Compile Include="ConnectionManagerServer.cs" />
+    <Compile Include="DomainTransmissionManager.cs" />
+    <Compile Include="FrmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLog.Designer.cs">
+      <DependentUpon>FrmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="log4net\RichTextBoxAppender.cs" />
+    <Compile Include="log4net\TextBoxAppender.cs" />
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmWelcome.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonitor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FrmMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <SubType>
+      </SubType>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Script\Code2.vba" />
+    <None Include="Script\Code3.vba" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="TaskManagerServer.cs" />
+    <Compile Include="TaskTransmissionManager.cs" />
+    <Compile Include="TestManager.cs" />
+    <Compile Include="TreeViewDisplay.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Code Editor\CodeEditor\Project\CodeEditor.csproj">
+      <Project>{94BFA44A-F4D0-4605-88E6-3ADD498F5E16}</Project>
+      <Name>CodeEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code Editor\SyntaxDocument\Project\CodeEditor.SyntaxDocument.csproj">
+      <Project>{3F43BAB0-22B4-4FD6-9655-8BA214A093A5}</Project>
+      <Name>CodeEditor.SyntaxDocument</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Code Editor\SyntaxFiles\Project\CodeEditor.SyntaxFiles.csproj">
+      <Project>{3814F627-858A-42A3-9AAF-CD649413F2A8}</Project>
+      <Name>CodeEditor.SyntaxFiles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Transmission\Transmission.csproj">
+      <Project>{0983DFA2-B010-4AB3-85BB-0D706A670343}</Project>
+      <Name>Transmission</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\csExWB\csExWB.csproj">
+      <Project>{E8E8BB5D-3302-4763-94F2-A8A238F7D6EA}</Project>
+      <Name>csExWB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DomainAndTaskImplement\DomainAndTaskImplement.csproj">
+      <Project>{E25DCA35-7E26-49FC-97D6-82930327D0D1}</Project>
+      <Name>DomainAndTaskImplement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\log4net\log4net.csproj">
+      <Project>{F6A02431-167E-4347-BC43-65532C31CDB7}</Project>
+      <Name>log4net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaskStruct\TaskBase.csproj">
+      <Project>{998A454F-796E-4682-8CAB-D8BA2AE9B00B}</Project>
+      <Name>TaskBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VBAEngine\VBAEngine.csproj">
+      <Project>{CA45A99C-E453-4B3B-8BD5-01AC704C7430}</Project>
+      <Name>VBAEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="128.ico" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Resources\sasparser_welcome.jpg" />
+    <None Include="Resources\opendomain.png" />
+    <None Include="Resources\savedomain.png" />
+    <None Include="Resources\indicator_wheel2.gif" />
+    <None Include="Resources\indicator_remembermilk_orange.gif" />
+    <None Include="Resources\indicator.gif" />
+    <None Include="Resources\indicator_flower.gif" />
+    <None Include="Resources\indicator_medium.gif" />
+    <None Include="Resources\testcenter.png" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\starttest.png" />
+    <None Include="Resources\nextmessage.png" />
+    <None Include="Resources\dblogrefresh.png" />
+    <None Include="Resources\dblogshowall.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\fatal.png" />
+    <None Include="Resources\err.png" />
+    <None Include="Resources\debug.png" />
+    <None Include="Resources\warn.png" />
+    <None Include="Resources\deletedomain2.png" />
+    <None Include="Resources\newdomain1.png" />
+    <None Include="Resources\dblog.png" />
+    <None Include="Resources\deletedomain1.png" />
+    <None Include="Resources\domainoffline.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\start.png" />
+    <None Include="Resources\restart.png" />
+    <None Include="Resources\preference.png" />
+    <None Include="Resources\newdomain.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\test.png" />
+    <None Include="Resources\deletedomain.png" />
+    <None Include="Script\RLF-1.vba" />
+    <None Include="Script\RLF-2.vba" />
+    <None Include="Script\RLF-3.vba" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
